@@ -116,6 +116,14 @@ section {
   margin-left: 20px;
 }
 
+.btn-form-submit:hover {
+  background-color: #F2DA56;
+}
+
+.btn-form-submit:focus {
+  background-color: #F6BC25;
+}
+
 .input-group > .form-control {
   height: 70px;
   background: #FFF;
