@@ -402,3 +402,11 @@ section {
   }
 }
 /******End - Styling updated for section rows********/
+
+
+/******Start - Person Icon style**********/
+.person-icon {
+  width: 23px;
+  height: 23px;
+}
+/******End - Person Icon style************/
