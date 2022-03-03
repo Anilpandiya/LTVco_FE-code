@@ -3,10 +3,13 @@ $(document).ready(function () {
   $("#btn-search").on("click", function (e) {
     e.preventDefault();
     localStorage.clear(); //Clears storage for next request
-    email = $('input[type="text"]').val().toLowerCase();
-
-    var x, y;
-    regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    
+    const email = $('input[type="text"]').val().toLowerCase();
+    
+    const regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    
+    let x;
+    
     if (email.match(regEx)) {
       x = true;
     } else {
@@ -24,23 +27,23 @@ $(document).ready(function () {
           localStorage.setItem("userObject", contents);
           window.location.href = "result.html";
         })
-        .catch((e) => console.log(e));
+        .catch((error) => console.log(error));
     } else if (x !== true) {
       document.querySelector('input[type="text"]').parentNode.classList.add("error");
     }
   });
 
   $('input[type="text"]').keypress(function (event) {
-    email = $('input[type="text"]').val().toLowerCase();
-    regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    const email = $('input[type="text"]').val().toLowerCase();
+    const regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     if (email.match(regEx)) {
       x = true;
       document.querySelector('input[type="text"]').parentNode.classList.remove("error");
     } else {
       x = false;
     }
-    keycode = (event.keyCode ? event.keyCode : event.which);
-    if (keycode == '13') {
+    let keycode = (event.keyCode ? event.keyCode : event.which);
+    if (keycode === '13') {
       /**
        * Makes a request to ltv API to search an specific email address.
        * If there's a response, it gets stored in the local storage and redirects to results page
@@ -48,8 +51,7 @@ $(document).ready(function () {
       event.preventDefault();
       localStorage.clear(); //Clears storage for next request
 
-      var x, y;
-
+      let x;
 
       if (x === true) {
         const proxyurl = "";

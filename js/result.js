@@ -5,9 +5,8 @@ $(document).ready(function () {
    */
   if (window.localStorage) {
     if (localStorage.userObject) {
-      var user_object = localStorage.getItem('userObject');
-      var testVar;
-      retreivedObject = JSON.parse(user_object); //parses the retrieved object into an JSON object
+      let user_object = localStorage.getItem('userObject');
+      let retreivedObject = JSON.parse(user_object); //parses the retrieved object into an JSON object
       if (JSON.stringify(retreivedObject) == "[]") {
         $('#result-count').text("0 Results");
         $(".result-desc").text(
@@ -24,8 +23,8 @@ $(document).ready(function () {
         $(".email").append("<p>" + retreivedObject.email + "</p>");
 
         for (const phone_number in retreivedObject.phone_numbers) {
-          phone = retreivedObject.phone_numbers[phone_number]
-          formatted_phone = "(" + phone.substring(0, 3) + ") " + phone.substring(3, 6) + "-" + phone.substring(6, 10);
+          let phone = retreivedObject.phone_numbers[phone_number]
+          let formatted_phone = "(" + phone.substring(0, 3) + ") " + phone.substring(3, 6) + "-" + phone.substring(6, 10);
 
           $(".phone-num").append(
             "<a href=" + `tel:${phone}` + " style='display: block;color: #004A80;'>" + `${formatted_phone}` + "</a>"

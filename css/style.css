@@ -403,14 +403,6 @@ section {
 }
 /******End - Styling updated for section rows********/
 
-
-/******Start - Person Icon style**********/
-.person-icon {
-  width: 23px;
-  height: 23px;
-}
-/******End - Person Icon style************/
-
 /******* Style for Mobile devices *******/
 @media only screen and (max-width: 768px) {
   .input-group.error .error-msg {
