@@ -137,11 +137,27 @@ section {
   border-radius: 3px 3px 0 0 !important;
 }
 
-.error-msg {
+.error-msg-mail {
   display: none;
 }
 
-.input-group.error .error-msg {
+.input-group.error-m .error-msg-mail {
+  display: block;
+  position: absolute;
+  bottom: -30px;
+  margin: 0px;
+  padding: 4px 12px;
+  background: #DC0015;
+  color: #FFF;
+  border-radius: 0 0 3px 3px;
+  font-size: 16px;
+}
+
+.error-msg-number {
+  display: none;
+}
+
+.input-group.error-n .error-msg-number {
   display: block;
   position: absolute;
   bottom: -30px;
@@ -159,6 +175,18 @@ section {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+.input-radio {
+  margin: 20px;
+  color: yellow;
+}
+.tel-radio {
+  margin-left: 30px;
+}
+
+#telephonefield {
+  display: none;
 }
 
 .form-subtext {

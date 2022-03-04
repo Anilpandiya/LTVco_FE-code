@@ -29,9 +29,17 @@
         </div>
         
         <form>
-          <div class="input-group">
-            <input class="form-control" type="text" name="email" placeholder="Enter an Email Address" />
-            <p class="error-msg">Please enter a valid email address</p>
+          <div class="input-radio">
+            <input type="radio" name="contactradio" id="email" checked />
+            email
+            <input class="tel-radio" type="radio" name="contactradio" id="telephone" />
+            telephone
+          </div>
+          <div class="input-group">            
+            <input class="form-control" id="emailfield" type="text" name="email" placeholder="Enter an Email Address" />
+            <input class="form-control" id="telephonefield" type="text" name="number" placeholder="Enter a Phone Number" />
+            <p class="error-msg-mail">Please enter a valid email address</p>
+            <p class="error-msg-number">Please enter a valid number</p>
             <button id="btn-search" class="btn btn-form-submit text-uppercase" type="submit">Go!</button>
           </div>
           <div class="d-flex justify-content-start justify-content-md-end align-items-center mt-4">
